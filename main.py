@@ -13,7 +13,7 @@ if text_input:
     # Display the QR code
     st.image(temp_file_path)
     with open(temp_file_path, "rb") as file:
-        st.download_button(label="Download", data=file, file_name="qrcodes.png", mime="application/png")
+        st.download_button(label="Download", data=file, file_name="qrcode.png", mime="application/png")
     os.remove(temp_file_path)
 
 
@@ -21,10 +21,9 @@ if text_input:
 # Add your Streamlit content here
 
 # Inject the AdSense code from a separate HTML file
-#HtmlFile = open("adsense.html", "r", encoding="utf-8")
-#adsense_code = HtmlFile.read()
-#st.components.html(adsense_code)
-
+HtmlFile = open("file.html", "r", encoding="utf-8")
+adsense_code = HtmlFile.read()
+st.components.html(adsense_code)
 
 
     # Delete the temporary file
