@@ -23,7 +23,7 @@ if text_input:
 # Inject the AdSense code from a separate HTML file
 HtmlFile = open("file.html", "r", encoding="utf-8")
 adsense_code = HtmlFile.read()
-st.markdown(adsense_code, unsafe_allow_html=True)
+st.html(adsense_code)
 
 
     # Delete the temporary file
